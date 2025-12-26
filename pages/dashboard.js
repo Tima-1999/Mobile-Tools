@@ -1,12 +1,19 @@
-import { useEffect, useState } from 'react'; // Şu setire üns ber!
+import { useEffect, useState } from 'react';
 import { auth, db } from '../lib/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { collection, query, onSnapshot, orderBy } from 'firebase/firestore';
+
+// ŞU SETIRI GOŞMALY:
+import { useRouter } from 'next/router'; 
 
 export default function Dashboard() {
   const [messages, setMessages] = useState([]);
   const [user, setUser] = useState(null);
-  const router = useRouter();
+  
+  // useRouter-y ulanmak üçin şu hem gerek:
+  const router = useRouter(); 
 
+  // ... galan kodlar
   useEffect(() => {
     onAuthStateChanged(auth, (u) => {
       if (u) {
