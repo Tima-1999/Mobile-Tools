@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { auth } from '../firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
-import { useRouter } from 'next/router';
+// Öňki ýalnyş ýoly: import { auth, db } from '../firebase';
+// Täze dogry ýoly:
+import { auth, db } from '../lib/firebase';
 
 export default function Login() {
   const [email, setEmail] = useState('');
