@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
-import { auth, db } from '../firebase';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { collection, query, onSnapshot, orderBy } from 'firebase/firestore';
-import { useRouter } from 'next/router';
+// Öňki ýalnyş ýoly: import { auth, db } from '../firebase';
+// Täze dogry ýoly:
+import { auth, db } from '../lib/firebase';
 
 export default function Dashboard() {
   const [messages, setMessages] = useState([]);
