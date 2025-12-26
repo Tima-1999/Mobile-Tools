@@ -1,6 +1,6 @@
-// Öňki ýalnyş ýoly: import { auth, db } from '../firebase';
-// Täze dogry ýoly:
+import { useEffect, useState } from 'react'; // Şu setire üns ber!
 import { auth, db } from '../lib/firebase';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 export default function Login() {
   const [email, setEmail] = useState('');
